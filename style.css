@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+/*=============
+    REUSED STYLES
+==============*/
+
+.section {
+  height: 100vh;
+}
+
+/*==========
+    HERO
+===========*/
+
+.hero-section {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo > img {
+  width: 15rem;
+}
+
+.nav__links {
+  color: #f4f4f4;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+.nav__links > a {
+  gap: 0.3rem;
+  position: relative;
+}
+
+.nav__links > a::after {
+  background-color: #fff;
+  border-radius: 3px;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  height: 3px;
+  width: 100%;
+  opacity: 0;
+
+  transition: 250ms ease;
+}
+
+.nav__links > a:hover::after {
+  opacity: 1;
+}
+
+.hero-section > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-text {
+  border: 2px solid #f4f4f4;
+  color: #f4f4f4;
+  position: absolute;
+  padding: 2rem 3rem;
+  top: 350px;
+  left: 200px;
+  font-size: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*==========
+    ABOUT
+===========*/
+.about {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.about > img {
+  width: 900px;
+}
+
+.about__text {
+  background-color: #fff;
+  position: absolute;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  right: 80px;
+  bottom: 70px;
+  width: 500px;
+}
+
+.about__text-title {
+  font-size: 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.about__text-text {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Josefin Sans", sans-serif;
+  width: 94%;
+}
+
+/*=============
+    CREATIONS
+===============*/
+.creations {
+  margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creations__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  width: 998px;
+}
+
+.creations__header-title {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.creations__header-btn {
+  background-color: #030303;
+  border-radius: 4px;
+  color: #f4f4f4;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding-inline: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  height: 2rem;
+}
+
+.cerations-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1200px;
+}
+
+.creation__card {
+  cursor: pointer;
+  position: relative;
+}
+
+.creation__card::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.creation__card > img {
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.creation__card-text {
+  color: #f4f4f4;
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.creation__card:is(:hover) .creation__card-text {
+  color: #030303;
+  transition: 250ms ease;
+}
+
+.creation__card:hover::after {
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: 250ms ease;
+}
+
+/*==========
+    FOOTER
+===========*/
+.footer {
+  position: relative;
+  background-color: #030303;
+  margin-top: 20rem;
+  padding: 3rem 10rem;
+  height: 20vh;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer__top-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__bottom-right {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 1px;
+}
